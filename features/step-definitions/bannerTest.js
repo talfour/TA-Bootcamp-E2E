@@ -6,9 +6,7 @@ Given("I navigate to the newegg page", async () => {
 
 When("I see promo banner", async () => {
   try {
-    await browser.waitUntil(async () => {
-      return $(".modal-content").isDisplayed();
-    }, 2000);
+    await $(".modal-content").waitForDisplayed();
   } catch (error) {
     console.log(`promo banner was not displayed ${error}`);
   }
