@@ -1,6 +1,6 @@
 const { Given, When, Then } = require("@wdio/cucumber-framework");
 
-Given("Open {string} tab", async (tab) => {
+Given("Open Today's Best Deals tab", async () => {
   await $("#trendingBanner_720202").click();
 });
 
