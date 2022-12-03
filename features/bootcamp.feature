@@ -11,6 +11,6 @@ Feature: Bootcamp E2E
         Then At least one item appears
 
     Scenario: Internet shop logo button
-        Given Open "Today's Best Deals" tab
+        Given Open Today's Best Deals tab
         When Click on the Internet shop logo top right corner
         Then I am on the main page
