@@ -7,13 +7,15 @@ Given("Enter the word {string} in the search bar top middle", async (word) => {
 });
 
 When("Click the search", async () => {
-  await $("button.ico").click();
+  const searchBtn = await $("button.ico");
+  await expect(searchBtn).toBeDisplayed()
+  await searchBtn.click()
 });
 
 Then("At least one item appears", async () => {
-  const MINIMUM_ITEMS_FOUND = 1;
+  const minimum_items_to_find = 1;
   const arrayOfItemsFound = $$(".item-cell");
   await expect(arrayOfItemsFound).toBeElementsArrayOfSize({
-    gte: MINIMUM_ITEMS_FOUND,
+    gte: minimum_items_to_find,
   });
 });
